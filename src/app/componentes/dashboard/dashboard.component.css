@@ -1,0 +1,14 @@
+.logo {
+    height: 70px;
+    border-radius: 30%;
+    margin-right: 15px;
+    padding: 0;
+}
+
+.maincontainer{
+    height: 78vh;
+}
+
+.card-img-top {
+    height: 300px;
+}

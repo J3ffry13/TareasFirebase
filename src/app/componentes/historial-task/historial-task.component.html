@@ -1,0 +1,34 @@
+@if (loading) {
+    <div style="height: 75vh; width: 100%;" class="d-flex justify-content-center align-items-center">
+        <app-spinner></app-spinner>
+    </div>
+}
+@if (!loading) {
+<div style="min-height: 74vh;" class="mb-4">
+    <div class="">
+        <highcharts-chart id="chartOptionsPie" [Highcharts]="highcharts" [options]="chartOptionsPie"
+            [callbackFunction]="chartCallback" [(update)]="updateFromInput" [oneToOne]="true"
+            style="width: 100%; height: 100%; display: flex">
+        </highcharts-chart>
+    </div>
+    <div>
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="mt-2 mb-4">
+            @if (this.listPendiente.length > 0) {
+            <mat-tab label="Pendientes ({{this.listPendiente.length}})">
+                <app-tables [listData]=listPendiente [tipo]=1></app-tables>
+            </mat-tab>
+            }
+            @if (this.listInicados.length > 0) {
+            <mat-tab label="Iniciados ({{this.listInicados.length}})">
+                <app-tables [listData]=listInicados [tipo]=2></app-tables>
+            </mat-tab>
+            }
+            @if (this.listFinalizados.length > 0) {
+            <mat-tab label="Finalizados ({{this.listFinalizados.length}})">
+                <app-tables [listData]=listFinalizados [tipo]=3></app-tables>
+            </mat-tab>
+            }
+        </mat-tab-group>
+    </div>
+</div>
+}

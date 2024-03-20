@@ -1,0 +1,32 @@
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+
+}
+
+.example-container {
+    position: relative;
+}
+
+.example-table-container {
+    position: relative;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+td,
+th {
+    width: auto;
+    text-align: center;
+}
+
+td {
+    background-color: rgb( 255, 255, 255, 0.377);
+}
+
+.colorBack {
+    background-color: rgb( 255, 255, 255, 0.377);
+}
